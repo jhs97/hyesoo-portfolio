@@ -1,0 +1,23 @@
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  background-color: #d0e0c3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
