@@ -8,10 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: right;
+  background-color: var(--main-color);
+  z-index: 999;
 }
 
 #main-header a {
-  color: #fff;
+  color: var(--sub-text);
   font-weight: 700;
   font-size: 25px;
   padding: 5px;
@@ -28,8 +30,8 @@
 
 #main-title {
   width: 100vw;
-  /* background: #fff; */
-  /* padding: 30px; */
+  /* background: #333; */
+  padding-top: 90px;
 }
 
 .bg-title {
@@ -41,13 +43,13 @@
 .bg-title > h1 {
   background-color: #ccc;
   font-size: 250px;
-  color: #daeccc;
+  color: var(--sub-color);
 }
 
-#main-title .container > h1 {
-  color: #fff;
+#main-title .container > .title {
+  color: var(--sub-text);
   font-weight: 400;
   font-size: 80px;
   position: absolute;
-  top: 440px;
+  top: 55%;
 }
