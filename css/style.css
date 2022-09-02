@@ -1,9 +1,18 @@
 @import url(reset.css);
 
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 1440px;
+  height: 934px;
+  outline: 1px solid red;
+  position: relative;
+}
+
 #main-header {
   width: 100vw;
   height: 90px;
-  border-bottom: 1px solid #95c073;
+  border-bottom: 1px solid #daeccc;
   position: fixed;
   display: flex;
   align-items: center;
@@ -20,93 +29,181 @@
   margin-right: 50px;
 }
 
-.container {
-  outline: 1px solid #000;
-  width: 100%;
-  margin-bottom: 60px;
-}
-
 #main-title {
-  /* background: #333; */
-  padding-top: 90px;
+  padding-top: 30px;
 }
 
-#main-title .container > .bg-title {
+/* #main-title .container {
+  position: relative;
+} */
+
+#main-title .bg-title {
   color: #daeccc;
   font-size: 250px;
   font-weight: 700;
   line-height: 280px;
-  padding-top: 187px;
-  padding-bottom: 187px;
-  padding-left: 751px;
-  padding-right: 226px;
+  width: 943px;
+  /* outline: 3px dotted #333; */
+  position: absolute;
+  top: 18%;
+  right: 0;
+  animation: bg-title 1s 0.1s forwards;
+  opacity: 0;
 }
+@keyframes bg-title {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #main-title .container > .title {
   color: var(--sub-text);
   font-weight: 400;
   font-size: 80px;
+  position: absolute;
+  padding-left: 96px;
+  top: 43%;
 }
 
-#profile .container {
-  display: flex;
-  flex-direction: row;
+#profile {
+  padding-top: 60px;
 }
-#profile .information {
-  color: var(--text-color);
-  font-weight: 500;
-  font-size: 20px;
-  text-align: center;
-  padding-top: 253px;
-  padding-left: 240px;
+
+#profile .comtainer {
+  padding-left: 30px;
+  padding-right: 30px;
 }
-#profile .information > img {
+
+#profile .privacy img {
   width: 400px;
   margin-bottom: 25px;
+  animation: photo 3s 0.1s ease-out forwards;
+}
+@keyframes photo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-#profile ul {
-  padding-top: 136px;
-  padding-left: 250px;
+#profile .privacy {
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  position: absolute;
+  top: 223px;
+  left: 100px;
+}
+#profile .privacy > p {
+  margin-bottom: 10px;
 }
 
-#profile ul > .title {
-  font-weight: 700;
+#profile ._info {
+  position: absolute;
+  left: 650px;
+  top: 136px;
+}
+
+#profile .info-T {
   font-size: 25px;
-  background-color: #b0d98f;
-  padding: 10px;
-  width: 30%;
-}
-
-#profile ul .contents {
-  font-size: 20px;
-  font-weight: 400;
-  padding-top: 20px;
-  padding-left: 30px;
+  font-weight: 700;
+  text-align: center;
+  border-left: 2px solid #333;
   margin-bottom: 50px;
 }
-#profile ul .contents li {
-  padding-bottom: 15px;
+
+#profile .info-T .info-bg {
+  padding: 10px 15px 10px 15px;
+  background-color: #b0d98f;
+  width: 30%;
 }
-#profile ul .contents .bold {
+#profile .info-T .contents {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+#profile .info-T .contents > li {
+  margin-bottom: 15px;
+}
+#profile .info-T .contents > .bold {
   font-weight: 700;
 }
 
-#profile ul .skills {
+#profile .info-T .skills {
   display: flex;
-  flex-direction: row;
   text-align: center;
 }
-#profile ul .skills div {
+#profile .info-T .skills > li {
+  font-size: 15px;
+  font-weight: 500;
+}
+#profile .info-T .skills > li > div {
   width: 100px;
   height: 100px;
   background-color: #b0d98f;
-  margin-right: 10px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
-#profile ul .skills img {
-  /* width: 60px; */
+#profile .info-T .skills > li > div > img {
   height: 60px;
+}
+
+#chapter {
+  padding-top: 60px;
+}
+
+#chapter h1 {
+  color: #daeccc;
+  font-size: 200px;
+  font-weight: 700;
+  line-height: 280px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: chapter-t 1s 0.1s forwards;
+  opacity: 0;
+}
+@keyframes chapter-t {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#chapter img {
+  position: absolute;
+  top: 433px;
+  right: -22px;
+}
+
+#chapter .chapter-title {
+  position: absolute;
+  top: 520px;
+  right: 0;
+}
+#chapter .chapter-title li {
+  text-align: right;
+  margin-bottom: 40px;
+}
+#chapter .chapter-title a {
+  color: #333;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: right;
 }
