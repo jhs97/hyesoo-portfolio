@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: right;
-  /* background-color: var(--main-color); */
+  background-color: var(--main-color);
   z-index: 999;
 }
 
