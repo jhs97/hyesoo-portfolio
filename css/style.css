@@ -207,3 +207,135 @@
   font-weight: 500;
   text-align: right;
 }
+
+#portfolio .container {
+  margin-top: 60px;
+}
+
+#portfolio .PF-info {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  text-align: center;
+  gap: 82px;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+#portfolio .PF-info span {
+  font-size: 10px;
+  font-weight: 600;
+}
+#portfolio .PF-info p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+#portfolio .explanation {
+  margin-top: 157px;
+  margin-left: 100px;
+}
+#portfolio .explanation > h1 {
+  font-size: 90px;
+  font-style: italic;
+  font-weight: 600;
+  color: #daeccc;
+  margin-bottom: 38px;
+}
+#portfolio .container:nth-child(4) > .explanation > h1 {
+  font-size: 80px;
+}
+
+#portfolio .explanation > p {
+  font-weight: 400;
+  font-size: 25px;
+  width: 40%;
+  /* margin-left: 64px; */
+  text-align: justify;
+}
+#portfolio .container:nth-child(1) > .explanation > p {
+  margin-left: 64px;
+}
+#portfolio .container:nth-child(2) > .explanation > p {
+  margin-left: 20px;
+}
+#portfolio .container:nth-child(3) > .explanation > p {
+  margin-left: 37px;
+}
+#portfolio .container:nth-child(4) > .explanation > p {
+  margin-left: 40px;
+}
+
+.main-style {
+  margin-top: 74px;
+  margin-left: 160px;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-style .style {
+  margin-right: 60px;
+}
+
+.main-style h1 {
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.main-style .color-box {
+  display: flex;
+  flex-direction: row;
+  margin-left: 6px;
+}
+.main-style .hue {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+}
+.main-style .hue > p {
+  font-weight: 400;
+  font-size: 12px;
+}
+.main-style .hue .color01 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #08107b;
+  margin-bottom: 10px;
+}
+
+.main-style .hue .color02 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #e8af1e;
+  margin-bottom: 10px;
+}
+.style > img {
+  width: 160px;
+}
+
+#portfolio .preview img {
+  width: 522px;
+  position: absolute;
+  right: 9%;
+  top: 20%;
+}
+
+#go-github {
+  width: 185px;
+  border-radius: 50px;
+  background-color: #d0e0c3;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-color: #333;
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 8%;
+  right: 21%;
+}
+#go-github img {
+  margin-left: 13px;
+}
