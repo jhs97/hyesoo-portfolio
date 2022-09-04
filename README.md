@@ -5,7 +5,6 @@
 웹퍼블리셔 과정을 통해 배운 내용을 토대로 포트폴리오 페이지를 구현한다.
 
 ## 홈페이지 주소
- https://jhs97.github.io/hyesoo-portfolio/
 
 ## 개발기간
 
