@@ -1,10 +1,14 @@
 @import url(reset.css);
 
+@font-face {
+  font-family: "s-core Dream";
+  src: url(../font-face/SCDream4.otf);
+}
+
 .container {
   display: block;
   margin: 0 auto;
-  width: 1440px;
-  height: 934px;
+  width: 100%;
   outline: 1px solid red;
   position: relative;
 }
@@ -12,43 +16,40 @@
 #main-header {
   width: 100vw;
   height: 90px;
-  border-bottom: 1px solid #daeccc;
+  border-bottom: 1px solid #f2d1d1;
   position: fixed;
   display: flex;
   align-items: center;
   justify-content: right;
-  background-color: var(--main-color);
+  /* background-color: var(--bg-color); */
   z-index: 999;
 }
 
 #main-header a {
-  color: var(--sub-text);
+  color: #427185;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
   padding: 5px;
   margin-right: 50px;
 }
 
 #main-title {
-  padding-top: 30px;
+  padding: 30px;
 }
 
-/* #main-title .container {
-  position: relative;
-} */
-
 #main-title .bg-title {
-  color: #daeccc;
-  font-size: 250px;
+  color: #f2d1d1;
+  font-size: 350px;
   font-weight: 700;
-  line-height: 280px;
-  width: 943px;
+  line-height: 400px;
+  padding-left: 566px;
+  padding-top: 110px;
+  padding-bottom: 110px;
   /* outline: 3px dotted #333; */
-  position: absolute;
-  top: 18%;
-  right: 0;
   animation: bg-title 1s 0.1s forwards;
   opacity: 0;
+  display: flex;
+  justify-content: end;
 }
 @keyframes bg-title {
   0% {
@@ -61,21 +62,40 @@
 }
 
 #main-title .container > .title {
-  color: var(--sub-text);
+  color: #427185;
   font-weight: 400;
-  font-size: 80px;
+  font-size: 100px;
   position: absolute;
-  padding-left: 96px;
-  top: 43%;
+  padding-left: 172px;
+  top: 450px;
 }
 
 #profile {
-  padding-top: 60px;
+  padding: 30px;
+}
+#profile > .container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
-#profile .comtainer {
-  padding-left: 30px;
-  padding-right: 30px;
+#profile > .container h1 {
+  color: #d3a2a2;
+  font-size: 300px;
+  font-weight: 700;
+  line-height: 410px;
+  animation: profile-t 1s 0.1s forwards;
+  opacity: 0;
+  position: absolute;
+}
+@keyframes profile-t {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #profile .privacy img {
@@ -93,39 +113,46 @@
 }
 
 #profile .privacy {
-  text-align: center;
-  font-weight: 500;
-  font-size: 30px;
-  position: absolute;
-  top: 223px;
-  left: 100px;
+  padding-top: 380px;
+  padding-left: 270px;
+  padding-bottom: 87px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-items: center;
 }
 #profile .privacy > p {
   margin-bottom: 10px;
+  margin-left: 40px;
+  color: #333;
+  text-align: center;
+  font-weight: 500;
+  font-size: 30px;
+  width: 319px;
 }
 
 #profile ._info {
-  position: absolute;
-  left: 650px;
-  top: 136px;
+  padding-top: 100px;
+  padding-bottom: 128px;
 }
 
 #profile .info-T {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 700;
   text-align: center;
   border-left: 2px solid #333;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 
 #profile .info-T .info-bg {
   padding: 10px 15px 10px 15px;
-  background-color: #b0d98f;
+  background-color: #daeaf1;
   width: 30%;
+  color: #092e3f;
 }
 #profile .info-T .contents {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 25px;
   text-align: left;
   margin-left: 30px;
   margin-top: 20px;
@@ -133,6 +160,7 @@
 
 #profile .info-T .contents > li {
   margin-bottom: 15px;
+  color: var(--main-text);
 }
 #profile .info-T .contents > .bold {
   font-weight: 700;
@@ -143,13 +171,13 @@
   text-align: center;
 }
 #profile .info-T .skills > li {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
 }
 #profile .info-T .skills > li > div {
   width: 100px;
   height: 100px;
-  background-color: #b0d98f;
+  background-color: #daeaf1;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -162,17 +190,20 @@
 }
 
 #chapter {
-  padding-top: 60px;
+  padding: 30px;
+}
+#chapter > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
 }
 
 #chapter h1 {
-  color: #daeccc;
-  font-size: 200px;
+  color: #d3a2a2;
+  font-size: 300px;
   font-weight: 700;
-  line-height: 280px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  line-height: 410px;
   animation: chapter-t 1s 0.1s forwards;
   opacity: 0;
 }
@@ -187,29 +218,32 @@
 }
 
 #chapter img {
-  position: absolute;
-  top: 433px;
-  right: -22px;
+  padding-top: 145px;
+  padding-left: 522px;
+  padding-bottom: 430px;
 }
 
 #chapter .chapter-title {
   position: absolute;
-  top: 520px;
-  right: 0;
+  right: 30px;
+  bottom: 88px;
 }
 #chapter .chapter-title li {
   text-align: right;
   margin-bottom: 40px;
 }
 #chapter .chapter-title a {
-  color: #333;
-  font-size: 30px;
+  color: var(--main-text);
+  font-size: 40px;
   font-weight: 500;
   text-align: right;
 }
 
+#portfolio {
+  padding: 30px;
+}
 #portfolio .container {
-  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 #portfolio .PF-info {
@@ -222,52 +256,45 @@
   padding-left: 50px;
 }
 #portfolio .PF-info span {
-  font-size: 10px;
+  font-size: 15px;
   font-weight: 600;
 }
 #portfolio .PF-info p {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 400;
 }
 
+#portfolio > .container {
+  position: relative;
+}
 #portfolio .explanation {
-  margin-top: 157px;
+  margin-top: 114px;
   margin-left: 100px;
 }
 #portfolio .explanation > h1 {
-  font-size: 90px;
+  font-size: 130px;
   font-style: italic;
   font-weight: 600;
-  color: #daeccc;
-  margin-bottom: 38px;
+  color: #d3a2a2;
+  margin-bottom: 15px;
 }
 #portfolio .container:nth-child(4) > .explanation > h1 {
-  font-size: 80px;
+  font-size: 120px;
 }
 
 #portfolio .explanation > p {
-  font-weight: 400;
-  font-size: 25px;
+  font-family: "s-core dream";
+  font-size: 30px;
   width: 40%;
-  /* margin-left: 64px; */
   text-align: justify;
-}
-#portfolio .container:nth-child(1) > .explanation > p {
-  margin-left: 64px;
-}
-#portfolio .container:nth-child(2) > .explanation > p {
-  margin-left: 20px;
-}
-#portfolio .container:nth-child(3) > .explanation > p {
-  margin-left: 37px;
-}
-#portfolio .container:nth-child(4) > .explanation > p {
-  margin-left: 40px;
+  margin-left: 30px;
+  color: #333;
 }
 
 .main-style {
   margin-top: 74px;
-  margin-left: 160px;
+  margin-left: 176px;
+  padding-bottom: 150px;
   display: flex;
   flex-direction: row;
 }
@@ -278,18 +305,20 @@
 
 .main-style h1 {
   font-weight: 600;
-  font-size: 25px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: #333;
 }
 .main-style .color-box {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin-left: 6px;
 }
 .main-style .hue {
   display: flex;
   flex-direction: column;
-  margin-right: 15px;
+  margin-right: 35px;
 }
 .main-style .hue > p {
   font-weight: 400;
@@ -311,20 +340,20 @@
   margin-bottom: 10px;
 }
 .style > img {
-  width: 160px;
+  width: 25%;
 }
 
 #portfolio .preview img {
-  width: 522px;
+  width: 35%;
   position: absolute;
-  right: 9%;
-  top: 20%;
+  top: 150px;
+  right: 148px;
 }
 
 #go-github {
   width: 185px;
   border-radius: 50px;
-  background-color: #d0e0c3;
+  background-color: var(--bg-color);
   padding-top: 15px;
   padding-bottom: 15px;
   border-color: #333;

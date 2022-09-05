@@ -1,14 +1,13 @@
 :root {
-  --main-color: #d0e0c3;
-  --sub-color: #daeccc;
-  --text-color: #333;
-  --sub-text: #fff;
+  --bg-color: #ffe6e6;
+  --sub-bg: #f2d1d1;
+  --main-text: #333;
 }
 
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
-  background-color: #d0e0c3;
+  background-color: #ffe6e6;
   margin: 0 auto;
 }
 
