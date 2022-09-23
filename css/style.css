@@ -5,14 +5,21 @@
   src: url(../font-face/SCDream4.otf);
 }
 
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
 .container {
   display: block;
   margin: 0 auto;
   width: 100%;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   position: relative;
 }
 
+/* header */
 #main-header {
   width: 100vw;
   height: 90px;
@@ -33,6 +40,7 @@
   margin-right: 50px;
 }
 
+/* main-title */
 #main-title {
   padding: 30px;
 }
@@ -45,6 +53,7 @@
   padding-left: 566px;
   padding-top: 110px;
   padding-bottom: 110px;
+  margin-right: -40px;
   /* outline: 3px dotted #333; */
   animation: bg-title 1s 0.1s forwards;
   opacity: 0;
@@ -70,23 +79,22 @@
   top: 450px;
 }
 
+/* profile */
 #profile {
   padding: 30px;
 }
 #profile > .container {
-  display: flex;
-  justify-content: space-between;
   position: relative;
 }
 
 #profile > .container h1 {
   color: #d3a2a2;
-  font-size: 300px;
+  font-size: 270px;
   font-weight: 700;
-  line-height: 410px;
+  line-height: 313px;
+  padding-right: 904px;
   animation: profile-t 1s 0.1s forwards;
   opacity: 0;
-  position: absolute;
 }
 @keyframes profile-t {
   0% {
@@ -112,9 +120,14 @@
   }
 }
 
+#profile .profil {
+  display: flex;
+}
+
 #profile .privacy {
-  padding-top: 380px;
-  padding-left: 270px;
+  padding-top: 67px;
+  padding-left: 272px;
+  padding-right: 360px;
   padding-bottom: 87px;
   display: flex;
   flex-direction: column;
@@ -132,7 +145,7 @@
 }
 
 #profile ._info {
-  padding-top: 100px;
+  padding-top: 67px;
   padding-bottom: 128px;
 }
 
@@ -189,6 +202,7 @@
   height: 60px;
 }
 
+/* chapter */
 #chapter {
   padding: 30px;
 }
@@ -221,6 +235,7 @@
   padding-top: 145px;
   padding-left: 522px;
   padding-bottom: 430px;
+  margin-right: -30px;
 }
 
 #chapter .chapter-title {
@@ -239,6 +254,7 @@
   text-align: right;
 }
 
+/* portfolio */
 #portfolio {
   padding: 30px;
 }
@@ -277,6 +293,17 @@
   font-weight: 600;
   color: #d3a2a2;
   margin-bottom: 15px;
+
+  animation: explanation-t 1s 0.1s forwards;
+}
+@keyframes explanation-t {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 #portfolio .container:nth-child(4) > .explanation > h1 {
   font-size: 120px;
@@ -285,7 +312,8 @@
 #portfolio .explanation > p {
   font-family: "s-core dream";
   font-size: 30px;
-  width: 40%;
+  width: 45%;
+  height: 300px;
   text-align: justify;
   margin-left: 30px;
   color: #333;
@@ -343,11 +371,73 @@
   width: 25%;
 }
 
-#portfolio .preview img {
-  width: 35%;
+#portfolio .preview {
+  color: #fff;
   position: absolute;
-  top: 150px;
+  top: 450px;
   right: 148px;
+  text-align: center;
+
+  animation: prev 1s 0.1s forwards;
+}
+@keyframes prev {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#portfolio .preview img {
+  display: block;
+  position: relative;
+}
+/* #portfolio .preview > img:hover {
+  filter: brightness(40%);
+} */
+#portfolio .preview .prev-hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -480px;
+}
+
+#portfolio .preview .prev-hover > p {
+  padding-top: 90px;
+  padding-bottom: 100px;
+  font-size: 25px;
+  opacity: 0;
+}
+
+#portfolio .preview .prev-hover > .prev-btn {
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  width: 150px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transition: all 0.2s ease-in-out;
+}
+
+#portfolio .preview:hover img {
+  filter: brightness(40%);
+}
+#portfolio .preview:hover .prev-hover {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+#portfolio .preview:hover .prev-hover > p,
+#portfolio .preview:hover .prev-hover > .prev-btn {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transform: translateY(0);
 }
 
 #go-github {
@@ -362,9 +452,12 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: 8%;
-  right: 21%;
+  bottom: 125px;
+  right: 325px;
 }
 #go-github img {
   margin-left: 13px;
 }
+
+
+

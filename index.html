@@ -10,8 +10,16 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
     />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- jQuery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- css -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="js/main.js" />
   </head>
   <body>
     <header id="main-header">
@@ -35,69 +43,76 @@
     <section id="profile">
       <div class="container">
         <h1>PROFILE</h1>
-        <div class="privacy">
-          <img src="images/profile-photo.png" alt="증명사진" />
-          <p>정혜수 (Hyesoo Jeong)</p>
-          <p>1997.08.07</p>
-          <p>경기도 김포시 거주</p>
+        <div class="profil">
+          <div class="privacy">
+            <img src="images/profile-photo.png" alt="증명사진" />
+            <p>정혜수 (Hyesoo Jeong)</p>
+            <p>1997.08.07</p>
+            <p>경기도 김포시 거주</p>
+          </div>
+
+          <ul class="_info">
+            <li class="info-T">
+              <div class="info-bg">CONTACT</div>
+              <ul class="contents">
+                <li class="bold">E-MAIL</li>
+                <li>hyeosoo97@naver.com</li>
+                <li class="bold">PHONE</li>
+                <li>010 - 4143 - 1740</li>
+              </ul>
+            </li>
+
+            <li class="info-T">
+              <div class="info-bg">CERTIFICATE</div>
+              <ul class="contents">
+                <li>2022.?? 웹기능사 국가자격증</li>
+                <li>2022.?? GTQ 포토샵 1급</li>
+                <li>2022.?? GTQ 일러스트레이트 1급</li>
+              </ul>
+            </li>
+
+            <li class="info-T">
+              <div class="info-bg">SKILLS</div>
+              <ul class="contents skills">
+                <li>
+                  <div><img src="images/figma-icon.png" alt="피그마" /></div>
+                  80%
+                </li>
+                <li>
+                  <div>
+                    <img src="images/photoshop-icon.png" alt="포토샵" />
+                  </div>
+                  80%
+                </li>
+                <li>
+                  <div>
+                    <img
+                      src="images/illustrator-icon.png"
+                      alt="일러스트레이터"
+                    />
+                  </div>
+                  80%
+                </li>
+                <li>
+                  <div><img src="images/htmlIcon.png" alt="html" /></div>
+                  80%
+                </li>
+                <li>
+                  <div><img src="images/cssIcon.png" alt="css" /></div>
+                  80%
+                </li>
+                <li>
+                  <div><img src="images/jsIcon.png" alt="js" /></div>
+                  80%
+                </li>
+                <li>
+                  <div><img src="images/jqIcon.png" alt="jq" /></div>
+                  80%
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-
-        <ul class="_info">
-          <li class="info-T">
-            <div class="info-bg">CONTACT</div>
-            <ul class="contents">
-              <li class="bold">E-MAIL</li>
-              <li>hyeosoo97@naver.com</li>
-              <li class="bold">PHONE</li>
-              <li>010 - 4143 - 1740</li>
-            </ul>
-          </li>
-
-          <li class="info-T">
-            <div class="info-bg">CERTIFICATE</div>
-            <ul class="contents">
-              <li>2022.?? 웹기능사 국가자격증</li>
-              <li>2022.?? GTQ 포토샵 1급</li>
-              <li>2022.?? GTQ 일러스트레이트 1급</li>
-            </ul>
-          </li>
-
-          <li class="info-T">
-            <div class="info-bg">SKILLS</div>
-            <ul class="contents skills">
-              <li>
-                <div><img src="images/figma-icon.png" alt="피그마" /></div>
-                80%
-              </li>
-              <li>
-                <div><img src="images/photoshop-icon.png" alt="포토샵" /></div>
-                80%
-              </li>
-              <li>
-                <div>
-                  <img src="images/illustrator-icon.png" alt="일러스트레이터" />
-                </div>
-                80%
-              </li>
-              <li>
-                <div><img src="images/htmlIcon.png" alt="html" /></div>
-                80%
-              </li>
-              <li>
-                <div><img src="images/cssIcon.png" alt="css" /></div>
-                80%
-              </li>
-              <li>
-                <div><img src="images/jsIcon.png" alt="js" /></div>
-                80%
-              </li>
-              <li>
-                <div><img src="images/jqIcon.png" alt="jq" /></div>
-                80%
-              </li>
-            </ul>
-          </li>
-        </ul>
       </div>
     </section>
 
@@ -161,12 +176,16 @@
         </div>
 
         <div class="preview">
-          <a href="#">
-            <img src="images/olympus-prev.png" alt="올림푸스 프리뷰" />
-          </a>
+          <img src="images/olympus-prev.png" alt="올림푸스 프리뷰" />
+          <div class="prev-hover">
+            <p>올림푸스 한국 의료사업 메인페이지</p>
+            <a href="page-info/페이지소개.pdf" target="_blank" class="prev-btn"
+              >PDF 보기</a
+            >
+          </div>
         </div>
 
-        <button id="go-github">
+        <button id="go-github" type="button" onclick="window.open()">
           작품보기<img src="images/github-icon.svg" alt="깃허브" />
         </button>
       </div>
@@ -210,9 +229,11 @@
         </div>
 
         <div class="preview">
-          <a href="#">
-            <img src="images/moniter.png" alt="모니터" />
-          </a>
+          <img src="images/moniter.png" alt="모니터" />
+          <div class="prev-hover">
+            <p>푸드올로지 메인페이지</p>
+            <a href="#" target="_blank" class="prev-btn">PDF 보기</a>
+          </div>
         </div>
 
         <button id="go-github">
@@ -264,9 +285,11 @@
         </div>
 
         <div class="preview">
-          <a href="#">
-            <img src="images/moniter.png" alt="모니터" />
-          </a>
+          <img src="images/moniter.png" alt="모니터" />
+          <div class="prev-hover">
+            <p>슈슐랭 메인페이지<br />반응형+모바일버전</p>
+            <a href="#" target="_blank" class="prev-btn">PDF 보기</a>
+          </div>
         </div>
 
         <button id="go-github">
@@ -317,14 +340,25 @@
         </div>
 
         <div class="preview">
-          <a href="#">
-            <img src="images/moniter.png" alt="모니터" />
-            
+          <img src="images/moniter.png" alt="모니터" />
+          <div class="prev-hover">
+            <p>
+              베스킨라빈스 메인페이지<br />
+              반응형+모바일버전
+            </p>
+            <a href="#" target="_blank" class="prev-btn">PDF 보기</a>
+          </div>
         </div>
         <button id="go-github">
           작품보기<img src="images/github-icon.svg" alt="깃허브" />
         </button>
       </div>
     </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- 내 js -->
+    <link rel="stylesheet" href="js/main.js" />
   </body>
 </html>
